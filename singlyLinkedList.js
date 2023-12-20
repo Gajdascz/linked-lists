@@ -12,7 +12,7 @@ function singlyLinkedList() {
   };
 
   const append = (name, data = {}) => {
-    const newNode = listNode(name, data);
+    const newNode = listNode({ name, data });
     if (!_head) {
       setFirstNode(newNode);
       return;
@@ -24,7 +24,7 @@ function singlyLinkedList() {
   };
 
   const prepend = (name, data = {}) => {
-    const newNode = listNode(name, data);
+    const newNode = listNode({ name, data });
     if (!_head) {
       setFirstNode(newNode);
       return;
@@ -93,7 +93,7 @@ function singlyLinkedList() {
         prepend(name, data);
         return;
       }
-      const newNode = listNode(name, data);
+      const newNode = listNode({ name, data });
       if (!_head) {
         setFirstNode(newNode);
         return;

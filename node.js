@@ -1,6 +1,7 @@
-function node(name = null, data = {}, next = null) {
+function node({ name = null, data = {}, next = null, prev = null }) {
   let _data = data;
   let _next = next;
+  let _prev = prev;
   let _name = name;
 
   const hasDataKey = (key) => Object.keys(_data).includes(key);
@@ -48,6 +49,14 @@ function node(name = null, data = {}, next = null) {
     set name(newName) {
       _name = newName;
     },
+    ...(_prev !== null && {
+      set prev(prevNode) {
+        _prev = prevNode;
+      },
+      get prev() {
+        return _prev;
+      },
+    }),
     addData,
     removeData,
     getData,
