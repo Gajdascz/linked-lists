@@ -1,8 +1,7 @@
 # linked-lists
 
 This repository, part of The Odin Project's Node.js curriculum, showcases my implementations of singly and doubly linked lists in JavaScript, emphasizing the core concepts of linked list data structures.
-
-<br/><br/>Project Page: [The Odin Project](https://www.theodinproject.com/lessons/javascript-linked-lists)
+<br/>Project Page: [The Odin Project](https://www.theodinproject.com/lessons/javascript-linked-lists)
 
 ## Learning Outcomes
 
