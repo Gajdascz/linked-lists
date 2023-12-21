@@ -1,4 +1,4 @@
-function node({ name = null, data = {}, next = null, prev = null }) {
+function node({ name = null, data = {}, next = null, prev = undefined } = {}) {
   let _data = data;
   let _next = next;
   let _prev = prev;
@@ -49,7 +49,7 @@ function node({ name = null, data = {}, next = null, prev = null }) {
     set name(newName) {
       _name = newName;
     },
-    ...(_prev !== null && {
+    ...(_prev !== undefined && {
       set prev(prevNode) {
         _prev = prevNode;
       },
